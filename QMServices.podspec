@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name = "QMServices"
-    s.version = "0.6.2"
+    s.version = "0.6.3"
     s.summary = "Easy-to-use services for Quickblox SDK, for speeding up development of iOS chat applications."
     s.homepage = "https://github.com/QuickBlox/q-municate-services-ios"
     s.license = { :type => 'BSD', :file => 'LICENSE.txt' }
@@ -18,14 +18,14 @@ Pod::Spec.new do |s|
         "Vitaliy Gurkovsky" => "vitaliy.gurkovsky@injoit.com"
     }
     s.platform = :ios, "9.0"
-    s.source = { :git => "https://github.com/QuickBlox/q-municate-services-ios.git", :tag => "#{s.version}"}
+    s.source = { :git => "https://github.com/croesus/q-municate-services-ios.git", :tag => "#{s.version}"}
     s.source_files = "**/*.{h,m}"
     s.exclude_files = "Pods", "Frameworks"
     s.requires_arc = true
     s.libraries = "resolv", "xml2", "stdc++", "z"
     s.xcconfig = {
         'HEADER_SEARCH_PATHS' => '/usr/include/libxml2',
-        'FRAMEWORK_SEARCH_PATHS' => '$(PODS_ROOT)/../../Framework $(PODS_ROOT)/../External'
+        'FRAMEWORK_SEARCH_PATHS' => '$(PODS_ROOT)/../../Framework $(PODS_ROOT)/../External $(PODS_ROOT)/QuickBlox'
     }
     s.prefix_header_contents = '
         #import <Quickblox/Quickblox.h>
@@ -40,4 +40,5 @@ Pod::Spec.new do |s|
         'QMOpenGraphCacheModel' => 'QMOpenGraphCache/QMOpenGraphCache/CoreData/QMOpenGraphModel.xcdatamodeld'
     }
     s.dependency "Bolts",  '>= 1.9.0'
+    s.dependency "QuickBlox"
 end

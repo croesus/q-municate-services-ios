@@ -659,6 +659,8 @@
                                                                       [attachment.typeIdentifier isEqualToString:(NSString *)kUTTypeJPEG]) {
                                                                       
                                                                       attachment.image = [UIImage imageWithData:downloadOperation.data];
+                                                                      attachment.width = attachment.image.size.width;
+                                                                      attachment.height = attachment.image.size.height;
                                                                   }
                                                                   
                                                                   if (!attachment.isPrepared) {

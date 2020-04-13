@@ -15,13 +15,13 @@
 #import <QMServices/QMUsersCache.h>
 #import <QMServices/QMOpenGraphCache.h>
 #import <QMServices/QMContactListCache.h>
-#import <QMServices/QMServicesManager.h>
 #import <QMServices/QMSLog.h>
 
 #import <QMServices/QMContactListService.h>
 #import <QMServices/QMChatService.h>
 #import <QMServices/QMAuthService.h>
 #import <QMServices/QMUsersService.h>
+#import <QMServices/QMServicesManager.h>
 
 #import <QMServices/QBChatMessage+QMCustomParameters.h>
 #import <QMServices/QBChatAttachment+QMCustomData.h>

@@ -1012,7 +1012,7 @@ static NSString* const kQMChatServiceDomain = @"com.q-municate.chatservice";
         __typeof(weakSelf)strongSelf = weakSelf;
         
         QBResponsePage *page = [QBResponsePage responsePageWithLimit:strongSelf.chatMessagesPerPage];
-        NSMutableArray *allMessages = [[NSMutableArray alloc] init];
+        NSMutableArray *allMessages = [NSMutableArray arrayWithArray:[strongSelf.messagesMemoryStorage messagesWithDialogID:chatDialogID]];
         
         NSDictionary *extendedRequest = extendedParameters.count > 0 ?
         extendedParameters :
